@@ -5,9 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.Box;
 
 import java.util.EnumSet;
 
@@ -31,8 +29,6 @@ public class ZombiePounceAtTargetGoal extends Goal {
     private Vec3d calculateJumpVelocity(Vec3d start, Vec3d target) {
         double dx = target.x - start.x;
         double dz = target.z - start.z;
-        double dy = target.y - start.y;
-        
         // Calculate horizontal distance
         double horizontalDistance = Math.sqrt(dx * dx + dz * dz);
         
