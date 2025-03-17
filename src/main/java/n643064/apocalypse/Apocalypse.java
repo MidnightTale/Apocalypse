@@ -18,6 +18,7 @@ import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
+import net.minecraft.entity.SpawnReason;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -38,7 +39,6 @@ public class Apocalypse implements ModInitializer
     public void onInitialize()
     {
         AutoConfig.register(ApocalypseConfig.class, CustomGsonConfigSerializer::new);
-        IS_DIGGING = DataTracker.registerData(ZombieEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
         ConfigSavedEvent.EVENT.register(() ->
         {
@@ -68,7 +68,7 @@ public class Apocalypse implements ModInitializer
                 {
                     continue;
                 }
-                Entity tmp = optionalEntityType.get().create(world);
+                Entity tmp = optionalEntityType.get().create(world, SpawnReason.COMMAND);
                 clazz = Objects.requireNonNull(tmp).getClass();
                 tmp.remove(Entity.RemovalReason.DISCARDED);
                 if (!LivingEntity.class.isAssignableFrom(clazz))
