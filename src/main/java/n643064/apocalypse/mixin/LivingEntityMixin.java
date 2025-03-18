@@ -74,11 +74,11 @@ public abstract class LivingEntityMixin {
 
         // Check visibility based on time and light
         if (isDay) {
-            if (lightLevel > 10 && distance > 8.0) {
+            if (lightLevel > 10 && distance > 1.0) {
                 cir.setReturnValue(false);
                 return;
             }
-            if (lightLevel > 5 && distance > 12.0) {
+            if (lightLevel > 5 && distance > 4.0) {
                 cir.setReturnValue(false);
                 return;
             }
@@ -87,7 +87,7 @@ public abstract class LivingEntityMixin {
                 cir.setReturnValue(false);
                 return;
             }
-            if (lightLevel < 10 && distance > 20.0) {
+            if (lightLevel < 10 && distance > 24.0) {
                 cir.setReturnValue(false);
                 return;
             }
