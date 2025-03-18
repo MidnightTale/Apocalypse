@@ -4,7 +4,8 @@ import n643064.apocalypse.Apocalypse;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.text.Text;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.Heightmap;
@@ -60,7 +61,7 @@ public class HordeSpawner implements SpecialSpawner
                         }
                         world.spawnEntity(e);
                     }
-                    player.sendMessage(Text.of("A horde has spawned!"));
+                    world.playSound(null, pos, SoundEvents.ENTITY_ZOMBIE_AMBIENT, SoundCategory.HOSTILE, 3.0F, 0.3F);
                 }
             }
         }
