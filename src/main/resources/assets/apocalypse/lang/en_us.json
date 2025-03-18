@@ -36,5 +36,13 @@
   "text.autoconfig.apocalypse.option.zombie.modifyPiglins": "Modify Zombified Piglins",
   "text.autoconfig.apocalypse.option.zombie.fallDamageMultiplier": "Fall damage multiplier (0.0 = no damage, 1.0 = normal damage)",
   "text.autoconfig.apocalypse.option.zombie.takeFallDamage": "Enable fall damage for zombies",
-  "text.autoconfig.apocalypse.option.zombie.minFallDamageDistance": "Minimum fall distance for damage (in blocks)"
+  "text.autoconfig.apocalypse.option.zombie.minFallDamageDistance": "Minimum fall distance for damage (in blocks)",
+  "text.autoconfig.apocalypse.option.zombie.blindInDaylight": "Make zombies blind during daytime",
+  "text.autoconfig.apocalypse.option.zombie.blindInNight": "Make zombies blind during nighttime",
+  "text.autoconfig.apocalypse.option.zombie.visibilityRange": "Maximum visibility range (in blocks)",
+  "text.autoconfig.apocalypse.option.zombie.enableAlert": "Enable zombie alert system",
+  "text.autoconfig.apocalypse.option.zombie.alertRange": "Alert range (in blocks)",
+  "text.autoconfig.apocalypse.option.zombie.alertCheckInterval": "Alert check interval (in ticks)",
+  "text.autoconfig.apocalypse.option.zombie.alertSoundVolume": "Alert sound volume",
+  "text.autoconfig.apocalypse.option.zombie.alertSoundPitch": "Alert sound pitch"
 }

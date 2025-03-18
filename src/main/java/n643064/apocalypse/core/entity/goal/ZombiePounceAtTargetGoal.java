@@ -94,8 +94,8 @@ public class ZombiePounceAtTargetGoal extends Goal {
         this.mob.setVelocity(jumpVel);
 
         // Play aggressive sound
-        float pitch = 0.8F + mob.getRandom().nextFloat() * 0.8F;
-        mob.playSound(SoundEvents.ENTITY_ZOMBIE_ATTACK_WOODEN_DOOR, 1.8F, pitch);
+        float pitch = 1.4F + mob.getRandom().nextFloat() * 0.2F;
+        mob.playSound(SoundEvents.ENTITY_ZOMBIE_AMBIENT, 1.8F, pitch);
 
         cooldown = 30;
         this.mob.getJumpControl().setActive();

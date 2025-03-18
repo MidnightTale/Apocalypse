@@ -143,6 +143,14 @@ public class Apocalypse implements ModInitializer
            public float fallDamageMultiplier = 0.8f;
            public boolean takeFallDamage = true;
            public float minFallDamageDistance = 10.0f;
+           public boolean blindInDaylight = true;
+           public boolean blindInNight = false;
+           public float visibilityRange = 16.0f;
+           public boolean enableAlert = true;
+           public float alertRange = 16.0f;
+           public float alertCheckInterval = 100.0f;
+           public float alertSoundVolume = 1.2f;
+           public float alertSoundPitch = 0.6f;
         }
 
     }

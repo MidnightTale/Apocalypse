@@ -59,7 +59,7 @@ public abstract class ZombieEntityMixin extends HostileEntity
         }
         this.goalSelector.add(2, new ZombieAttackGoal(instance, config.attackSpeed, false));
         this.goalSelector.add(6, new MoveThroughVillageGoal(instance, 1.0, false, 4, instance::canBreakDoors));
-        this.goalSelector.add(7, new WanderAroundFarGoal(instance, 1.0));
+        this.goalSelector.add(7, new WanderAroundFarGoal(instance, 1.0));     
         if (config.revengeEnabled)
         {
             if (config.groupRevengeEnabled)
