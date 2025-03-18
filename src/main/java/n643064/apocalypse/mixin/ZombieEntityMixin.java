@@ -14,7 +14,6 @@ import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
-import net.minecraft.entity.attribute.EntityAttributes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -41,14 +40,6 @@ public abstract class ZombieEntityMixin extends HostileEntity
     @Inject(method = "initDataTracker", at = @At("TAIL"))
     private void addCustomDataTracker(DataTracker.Builder builder, CallbackInfo ci) {
         builder.add(Apocalypse.IS_DIGGING, false);
-    }
-
-    @Inject(method = "<init>", at = @At("TAIL"))
-    private void init(EntityType<? extends HostileEntity> entityType, World world, CallbackInfo ci) {
-        // Set permanent safe fall distance for zombies
-        if (this.getAttributes().hasAttribute(EntityAttributes.SAFE_FALL_DISTANCE)) {
-            this.getAttributeInstance(EntityAttributes.SAFE_FALL_DISTANCE).setBaseValue(10.0);
-        }
     }
 
     protected ZombieEntityMixin(EntityType<? extends HostileEntity> entityType, World world)
@@ -125,5 +116,4 @@ public abstract class ZombieEntityMixin extends HostileEntity
     {
         return !Apocalypse.config.zombie.enableDigging;
     }
-
 }

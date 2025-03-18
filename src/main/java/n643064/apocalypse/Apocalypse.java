@@ -15,7 +15,6 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
-import net.minecraft.entity.SpawnReason;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -65,7 +64,7 @@ public class Apocalypse implements ModInitializer
                 {
                     continue;
                 }
-                Entity tmp = optionalEntityType.get().create(world, SpawnReason.COMMAND);
+                Entity tmp = optionalEntityType.get().create(world);
                 clazz = Objects.requireNonNull(tmp).getClass();
                 tmp.remove(Entity.RemovalReason.DISCARDED);
                 if (!LivingEntity.class.isAssignableFrom(clazz))
@@ -141,6 +140,9 @@ public class Apocalypse implements ModInitializer
            public float diggingProgressTick = 0.05f;
            public int maximumTargetHardness = 20;
            public boolean modifyPiglins = true;
+           public float fallDamageMultiplier = 0.8f;
+           public boolean takeFallDamage = true;
+           public float minFallDamageDistance = 10.0f;
         }
 
     }

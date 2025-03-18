@@ -33,5 +33,8 @@
   "text.autoconfig.apocalypse.option.zombie.instantDoorBreakHardness": "Maximal hardness of instantly broken doors",
   "text.autoconfig.apocalypse.option.zombie.diggingProgressTick": "Breaking progress per tick",
   "text.autoconfig.apocalypse.option.zombie.maximumTargetHardness": "Maximal target block hardness",
-  "text.autoconfig.apocalypse.option.zombie.modifyPiglins": "Modify Zombified Piglins"
+  "text.autoconfig.apocalypse.option.zombie.modifyPiglins": "Modify Zombified Piglins",
+  "text.autoconfig.apocalypse.option.zombie.fallDamageMultiplier": "Fall damage multiplier (0.0 = no damage, 1.0 = normal damage)",
+  "text.autoconfig.apocalypse.option.zombie.takeFallDamage": "Enable fall damage for zombies",
+  "text.autoconfig.apocalypse.option.zombie.minFallDamageDistance": "Minimum fall distance for damage (in blocks)"
 }
